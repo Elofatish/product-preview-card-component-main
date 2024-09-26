@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    font-weight:weight;
+    font-weight: 700;
+    background-color: var(--Cream);
+    min-height: 100vh;
+    display: grid;
+    place-content:center;
+
+}
+.product{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 600px;
+    margin: 1rem;
+}
+img{
+    display: block;
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+.content{
+    background-color: var(--White);
+    padding: 32px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+}
+h1{
+    font-family: "Fraunces", serif;
+    font-size: 32px;
+    margin: 20px 0;
+    line-height: 1;
+    color: var(--Very-dark-blue);
+    
+}
+.content p{
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+    line-height: 1.6;
+    font-weight: 500;
+}
+.price{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.price .discount{
+    font-size: 30px;
+    color: var(--Dark-cyan);
+    font-family: "Fraunces", serif;
+    margin-right: 20px;
+
+}
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: none;
+    background-color: var(--Dark-cyan);
+    color: white;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+}
+.cart::before{
+    content: "";
+    background-image: url(images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+    margin-right: 10px;
+}
+@media(max-width:700px){
+    .product{
+        grid-template-columns: 1fr;
+    }
+    img{
+        border-radius: 10px 10px 0 0;
+    }
+    .content{
+        border-radius: 0 0 10px 10px;
+    }
+}
